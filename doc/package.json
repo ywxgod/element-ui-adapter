@@ -1,0 +1,17 @@
+{
+  "name": "doc",
+  "version": "1.0.0",
+  "description": "基于element-ui组件改造了一些组件，这是使用文档",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch docs --exec \"vuepress dev docs\"",
+    "build": "vuepress build docs"
+  },
+  "author": "ywxgod",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "vuepress": "^1.4.1"
+  }
+}
