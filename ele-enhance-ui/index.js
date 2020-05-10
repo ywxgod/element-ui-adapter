@@ -1,5 +1,4 @@
-import "core-js";
-import ButtonBar from "./src/button-bar";
+import ButtonBar from "./src/eh-button-bar";
 
 export default {
     ButtonBar
