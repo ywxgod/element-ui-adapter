@@ -2,6 +2,9 @@ module.exports = {
     title: "Sculpting in Life",
     description: '你看天上那白云，聚了又散，散了又聚，人生离合，亦复如斯',
     base: '/doc/',
+    markdown: {
+        lineNumbers: true
+    },
     configureWebpack: {
         resolve: {
             alias: {

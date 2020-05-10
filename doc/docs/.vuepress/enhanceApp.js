@@ -1,5 +1,6 @@
 import 'element-ui/lib/theme-chalk/index.css';
 import 'ele-enhance-ui/dist/styles/ele-enhance-ui.css';
+import './styles/index.scss';
 import ElementUI from 'element-ui';
 import enui from 'ele-enhance-ui';
 
@@ -11,7 +12,7 @@ export default ({
     isServer // 当前应用配置是处于 服务端渲染 或 客户端
 }) => {
     Vue.use(ElementUI, { size: 'small', zIndex: 3000 });
-console.log(enui);
+
     Object.keys(enui).forEach(i => {
         Vue.use(enui[i]);
     })

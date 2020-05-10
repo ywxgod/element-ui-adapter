@@ -1,0 +1,17 @@
+
+p {
+  font-size: 14px;
+}
+
+// 设置全局表格表头背景
+table {
+  font-size: 14px;
+  display: table !important;
+  width: 100%;
+  thead {
+	background: #58229e;
+	color: white;
+	font-size: 14px;
+	font-weight: normal;
+  }
+}
