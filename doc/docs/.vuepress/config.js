@@ -1,24 +1,75 @@
 module.exports = {
-    title: "element-ui-adapter",
-    description: '根据项目需求，基于element-ui的部分组件进行改造，这里是改造后的组件的使用文档',
+    title: "Sculpting in Life",
+    description: '你看天上那白云，聚了又散，散了又聚，人生离合，亦复如斯',
+    base: '/doc/',
+    configureWebpack: {
+        resolve: {
+            alias: {
+                '@assets': './assets'
+            }
+        }
+    },
     displayAllHeaders: true,
     themeConfig: {
-        sidebar: [
+        nav: [
+            { text: 'Home', link: '/' },
             {
-                title: 'element-ui组件改造',   // 必要的
-                path: '/element-ui组件改造/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                children: [
-                    '/element-ui组件改造/ButtonBar'
+                text: 'Coding',
+                items: [
+                    { text: 'en-ui', title: 'Enhancement of EleUI', link: '/eh-ui/' },
+                    { text: 'v-mec', title: '', link: '/v-mec/' },
+                    { text: 'processing', title: '', link: '/processing/' },
+                    { text: 'c' , title: '', link: '/c-program/'},
+                    { text: 'vuepress', link: '/vue-press/' }
                 ]
             },
             {
-                title: 'vuepress相关',   // 必要的
-                path: '/vuepress相关/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                // sidebarDepth: 2,
-                children: [
-                    '/vuepress相关/如何上手'
+                text: 'About',
+                items: [
+                    { text: 'Profile', link: '/profile/' },
+                    { text: 'Blog', link: 'https://ywxgod.github.io/blog/', target:'_blank' }
                 ]
             },
-        ]
+        ],
+        sidebar: {
+            '/eh-ui/': [
+                {
+                    title: 'Enhancement-UI',
+                    path: '',
+                    children: [
+                        'ButtonBar' // 这里不需要带上上级路径, 而是相对上级的路径
+                    ]
+                }
+            ],
+            '/vue-press/': [
+                {
+                    title: 'vuepress学习',
+                    path: '',
+                    children: [
+                        '如何上手'
+                    ]
+                }
+            ],
+            '/v-mec/': [
+                {
+                    title: 'v-mec'
+                }
+            ],
+            '/processing/': [
+                {
+                    title: 'processing'
+                }
+            ],
+            '/c-program/': [
+                {
+                    title: 'c program'
+                }
+            ],
+            '/profile/': [
+                {
+                    title: '简介'
+                }
+            ]
+        }
     }
 };

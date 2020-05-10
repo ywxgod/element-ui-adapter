@@ -1,11 +1,11 @@
 <template>
     <div class="usage-button-bar">
-        <ButtonBar>
+        <eh-button-bar>
             <el-button>aaa</el-button>
             <el-button>aaa</el-button>
             <el-button>aaa</el-button>
             <el-button>aaa</el-button>
-        </ButtonBar>
+        </eh-button-bar>
     </div>
 </template>
 <script>
