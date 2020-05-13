@@ -58,7 +58,7 @@ selectedIndex的取值范围必须是0到buttons.length-1，超出此范围的�
 
 ## 方法详情
 
-<span id="getSelectedIndex"><styled-text font-weight="bold" font-size="16px">getSelectedIndex</styled-text></span>
+<span id="getSelectedIndex"><styled-text font-weight="bold" font-size="16px">getSelectedIndex()</styled-text></span>
 
 用于实时返回当前选中按钮的索引，通过索引我们可以获取当前按钮配置。
 
