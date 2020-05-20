@@ -5,7 +5,7 @@
             :key="item[valueField]"
             :label="item[labelField]"
             :value="item[valueField]">
-            <component v-if="itemRenderer" :is="itemRenderer" :item="item" @action="onAction" />
+            <component v-if="item.itemRenderer" :is="item.itemRenderer" :item="item" @action="onAction" />
         </el-option>
     </el-select>
 </template>
@@ -22,7 +22,8 @@
         name: 'EhSelect',
         computed: {
             popupClass() {
-                return (this.itemRenderer?'popup-with-itemRenderer':'') + ' ' + (this.$attrs['popper-class']||'');
+                const hasItemRenderer = this.options.some(i => i.itemRenderer);
+                return (hasItemRenderer?'popup-with-itemRenderer':'') + ' ' + (this.$attrs['popper-class']||'');
             }
         },
         props: {
@@ -35,10 +36,6 @@
             options: {
                 type: Array,
                 default: function() { return []; }
-            },
-            itemRenderer: {
-                type: Object,
-                default: function() { return null; }
             }
         },
         methods: {

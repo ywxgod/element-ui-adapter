@@ -1,9 +1,9 @@
-import ButtonBar from './src/eh-button-bar';
-import ComboxBox from './src/eh-combo-box';
-import ItemRenderer from "./src/base/EhItemRenderer";
+import EhButtonBar from './src/eh-button-bar';
+import EhComboxBox from './src/eh-combo-box';
+import EhItemRenderer from "./src/base/EhItemRenderer";
 
 export default {
-    ButtonBar,
-    ComboxBox,
-    ItemRenderer
+    EhButtonBar,
+    EhComboxBox,
+    EhItemRenderer
 }

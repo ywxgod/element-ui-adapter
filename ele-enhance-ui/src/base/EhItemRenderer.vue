@@ -4,7 +4,7 @@
     };
 
     export default {
-        name: 'ItemRenderer',
+        name: 'EhItemRenderer',
         props: {
             item: {
                 type: Object,
