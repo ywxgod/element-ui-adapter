@@ -1,8 +1,8 @@
-# ComboBox
+# EhComboBox
 
 ## 继承
 
-ComboBox -> Select
+EhComboBox -> EhSelect
 
 ## 描述
 
@@ -85,12 +85,12 @@ selectedIndex的取值范围必须是0到buttons.length-1，超出此范围的�
 
 <br />
 
-<ComboBox />
+<EhComboBoxSample />
 
-**ComboBox.vue文件代码：**
+**EhComboBoxSample.vue文件代码：**
 
-<<< @/docs/.vuepress/components/ComboBox.vue
+<<< @/docs/.vuepress/components/EhComboBoxSample.vue
 
-**ComboBoxItemRenderer.vue文件代码：**
+**EhComboBoxItemRendererSample.vue文件代码：**
 
-<<< @/docs/.vuepress/components/ComboBoxItemRenderer.vue
+<<< @/docs/.vuepress/components/EhComboBoxItemRendererSample.vue

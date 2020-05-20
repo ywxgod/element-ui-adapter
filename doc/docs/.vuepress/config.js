@@ -40,8 +40,8 @@ module.exports = {
                     title: 'Enhancement-UI',
                     path: '',
                     children: [
-                        'ButtonBar', // 这里不需要带上上级路径, 而是相对上级的路径
-                        'ComboBox'
+                        'EhButtonBar', // 这里不需要带上上级路径, 而是相对上级的路径
+                        'EhComboBox'
                     ]
                 }
             ],

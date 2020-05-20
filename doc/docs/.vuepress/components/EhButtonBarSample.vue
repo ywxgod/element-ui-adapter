@@ -19,7 +19,7 @@ const buttons = [
 ];
 
 export default {
-    name: 'ButtonBar',
+    name: 'EhButtonBarSample',
     data() {
         return {
             buttons,
@@ -34,7 +34,7 @@ export default {
     },
     methods: {
         onButtonBarChange({oldv, newv}) {
-            this.infos.push(`Event: change, oldv: ${JSON.stringify(oldv)}, newv: ${JSON.stringify(newv)}`);
+            this.infos.push(`Event: change, oldv: ${oldv.label}, newv: ${newv.label}`);
         },
         onButtonClick(item) {
             this.infos.push(`Event: click, item: ${JSON.stringify(item)}`);

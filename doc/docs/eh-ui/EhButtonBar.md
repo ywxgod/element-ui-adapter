@@ -1,4 +1,4 @@
-# ButtonBar
+# EhButtonBar
 
 ## 继承
 
@@ -7,15 +7,15 @@
 ## 描述
 
 跟element-ui的button-group相比，增加了选中状态，一个按钮组往往在初始化的时候需要告诉它选中的是第几个，且选中后的状态需要保持。
-ButtonBar中的按钮实例来自于el-button，我们可以通过给buttons属性传递合法的el-button能识别的属性，即可创建不同类型的按钮。
+EhButtonBar中的按钮实例来自于el-button，我们可以通过给buttons属性传递合法的el-button能识别的属性，即可创建不同类型的按钮。
 
 
 ## 属性
 
 | 属性 |
 |-------------|
-| <styled-text color="blue" fontWeight="bold">[buttons](#buttons)</styled-text>：Array <br />作为ButtonBar的数据源，buttons的长度决定了按钮的个数。buttons中的元素实际就是el-button的属性集合。|
-| <styled-text color="blue" fontWeight="bold">[selectedIndex](#selectedIndex)</styled-text>：Number <br /> 指定ButtonBar组件初始化时选中按钮的索引，从0开始 |
+| <styled-text color="blue" fontWeight="bold">[buttons](#buttons)</styled-text>：Array <br />作为EhButtonBar的数据源，buttons的长度决定了按钮的个数。buttons中的元素实际就是el-button的属性集合。|
+| <styled-text color="blue" fontWeight="bold">[selectedIndex](#selectedIndex)</styled-text>：Number <br /> 指定EhButtonBar组件初始化时选中按钮的索引，从0开始 |
 
 ## 方法
 
@@ -66,7 +66,7 @@ selectedIndex的取值范围必须是0到buttons.length-1，超出此范围的�
 
 <span id="click"><styled-text font-weight="bold" font-size="16px">click</styled-text></span>
 
-每次点击ButtonBar中的一个按钮时触发，同一个按钮点击多次，会多次触发。
+每次点击EhButtonBar中的一个按钮时触发，同一个按钮点击多次，会多次触发。
 
 | 参数名称 | 说明 |
 |-------------|-------------|
@@ -74,7 +74,7 @@ selectedIndex的取值范围必须是0到buttons.length-1，超出此范围的�
 
 <span id="change"><styled-text font-weight="bold" font-size="16px">change</styled-text></span>
 
-每次改变了ButtonBar中选中按钮的索引时触发，多次点击同一个按钮并不会触发此事件。
+每次改变了EhButtonBar中选中按钮的索引时触发，多次点击同一个按钮并不会触发此事件。
 
 | 参数名称 | 说明 |
 |-------------|-------------|
@@ -85,7 +85,7 @@ selectedIndex的取值范围必须是0到buttons.length-1，超出此范围的�
 
 <br />
 
-<ButtonBar />
+<EhButtonBarSample />
 
-<<< @/docs/.vuepress/components/ButtonBar.vue
+<<< @/docs/.vuepress/components/EhButtonBarSample.vue
 

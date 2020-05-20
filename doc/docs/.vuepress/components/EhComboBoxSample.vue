@@ -2,7 +2,6 @@
     <div>
         <eh-combo-box
                 labelField="name"
-                :itemRenderer="itemRenderer"
                 @action="onAction" @change="onChange"
                 :options="options1" v-model="userId1">
         </eh-combo-box>
@@ -16,18 +15,17 @@
 </template>
 
 <script>
-    import ComboBoxItemRenderer from "./ComboBoxItemRenderer";
+    import EhComboBoxItemRendererSample from "./EhComboBoxItemRendererSample";
 
     export default {
-        name: 'ComboBox',
+        name: 'EhComboBoxSample',
         data() {
             return {
-                itemRenderer: ComboBoxItemRenderer,
                 options1: [
-                    { id: 1, name: '宋江', age: 43 },
-                    { id: 2, name: '吴用', age: 40 },
-                    { id: 3, name: '卢俊义', age: 34 },
-                    { id: 4, name: '武松', age: 30 }
+                    { id: 1, name: '宋江', age: 43, itemRenderer: EhComboBoxItemRendererSample },
+                    { id: 2, name: '吴用', age: 40, itemRenderer: EhComboBoxItemRendererSample },
+                    { id: 3, name: '卢俊义', age: 34, itemRenderer: EhComboBoxItemRendererSample },
+                    { id: 4, name: '武松', age: 30, itemRenderer: EhComboBoxItemRendererSample }
                 ],
                 options2: [
                     { userId: 1, userName: '风清扬' },
