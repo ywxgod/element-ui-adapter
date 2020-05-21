@@ -22,7 +22,7 @@
         methods: {
             onButtonClick(e, action) {
                 e.stopPropagation();
-                this.dispatchEvent(e, action)
+                this.dispatchEvent(action)
             },
             stopEvt(e) {
                 console.log(e);

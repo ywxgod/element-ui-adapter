@@ -1,3 +1,10 @@
+let components = [
+    'EhButtonBar', // 这里不需要带上上级路径, 而是相对上级的路径
+    // 'EhComboBox',
+    './base/EhSelect',
+    './base/EhItemRenderer'
+].sort();
+
 module.exports = {
     title: "Sculpting in Life",
     description: '你看天上那白云，聚了又散，散了又聚，人生离合，亦复如斯',
@@ -39,10 +46,7 @@ module.exports = {
                 {
                     title: 'Enhancement-UI',
                     path: '',
-                    children: [
-                        'EhButtonBar', // 这里不需要带上上级路径, 而是相对上级的路径
-                        'EhComboBox'
-                    ]
+                    children: components
                 }
             ],
             '/vue-press/': [

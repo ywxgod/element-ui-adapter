@@ -1,31 +1,35 @@
 <template>
     <div>
-        <eh-combo-box
+        <eh-select
                 labelField="name"
                 @action="onAction" @change="onChange"
                 :options="options1" v-model="userId1">
-        </eh-combo-box>
-        <eh-combo-box
+        </eh-select>
+        <eh-select
                 labelField="userName"
                 valueField="userId"
                 @change="onChange"
                 :options="options2" v-model="userId2">
-        </eh-combo-box>
+        </eh-select>
     </div>
 </template>
 
 <script>
-    import EhComboBoxItemRendererSample from "./EhComboBoxItemRendererSample";
+    import EhSelectItemRendererSample from "./EhSelectItemRendererSample";
+
+    import enui from 'ele-enhance-ui';
+    const { EhSelect } = enui;
 
     export default {
-        name: 'EhComboBoxSample',
+        name: 'EhSelectSample',
+        components: { EhSelect },
         data() {
             return {
                 options1: [
-                    { id: 1, name: '宋江', age: 43, itemRenderer: EhComboBoxItemRendererSample },
-                    { id: 2, name: '吴用', age: 40, itemRenderer: EhComboBoxItemRendererSample },
-                    { id: 3, name: '卢俊义', age: 34, itemRenderer: EhComboBoxItemRendererSample },
-                    { id: 4, name: '武松', age: 30, itemRenderer: EhComboBoxItemRendererSample }
+                    { id: 1, name: '宋江', age: 43, itemRenderer: EhSelectItemRendererSample },
+                    { id: 2, name: '吴用', age: 40, itemRenderer: EhSelectItemRendererSample },
+                    { id: 3, name: '卢俊义', age: 34, itemRenderer: EhSelectItemRendererSample },
+                    { id: 4, name: '武松', age: 30, itemRenderer: EhSelectItemRendererSample }
                 ],
                 options2: [
                     { userId: 1, userName: '风清扬' },
@@ -38,9 +42,9 @@
             }
         },
         methods: {
-            onAction([evt, action, item]) {
+            onAction([item, ...rest]) {
                 // 请打开控制查看具体事件参数
-                console.log(evt, action, item);
+                console.log(item, rest);
             },
             onChange(value) {
                 console.log(value);
