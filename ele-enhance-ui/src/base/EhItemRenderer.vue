@@ -15,7 +15,7 @@
         },
         methods: {
             dispatchEvent(...rest) {
-                this.$emit(EVENT.ACTION, [ EVENT.ACTION, ...rest, this.item ]);
+                this.$emit(EVENT.ACTION, [ this.item, ...rest ]);
             }
         }
     }

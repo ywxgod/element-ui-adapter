@@ -39,8 +39,8 @@
             }
         },
         methods: {
-            onAction([eventType, ...rest]) {
-                this.$emit(eventType, rest);
+            onAction([item, ...rest]) {
+                this.$emit('action', [item, ...rest]);
             }
         }
     }
