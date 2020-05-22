@@ -17,6 +17,7 @@
 | <styled-text color="blue" fontWeight="bold">[labelField](#labelField)</styled-text>：String = 'label' <br /> 指定数据源(options)中用来获取label的属性，即指定读取哪个属性来显示在options列表中。|
 | <styled-text color="blue" fontWeight="bold">[valueField](#valueField)</styled-text>：String = 'id' <br /> 指定数据源(options)中用来获取value的属性，即指定读取哪个属性来指示显示项的值 |
 | <styled-text color="blue" fontWeight="bold">[options](#options)</styled-text>：Array <br /> 指定数据源(options)中用来获取value的属性，即指定读取哪个属性来指示显示项的值 |
+| <styled-text color="blue" fontWeight="bold">[group](#group)</styled-text>：Boolean <br /> 是否分组显示下拉菜单数据 |
 
 ## 方法
 
@@ -62,6 +63,41 @@ options指定EhSelect下拉菜单的数据源。options数组元素中我们可�
 ]
 ```
 itemRender可以继承自EhItemRenderer。请参考[EhItemRenderer](./EhItemRenderer.md)使用说明。
+
+<span id="group"><styled-text font-weight="bold" font-size="16px">group</styled-text></span>
+
+group默认值为false，即不分组显示。如果group为true，需要options支持，options必须符合以下结构：具体用法可以参考原[Select组件](https://element.eleme.cn/#/zh-CN/component/select)
+
+```javascript
+[ 
+{ 
+    label: '热门城市',
+    options: [{
+        value: 'Shanghai',
+        label: '上海'
+    }, {
+        value: 'Beijing',
+        label: '北京'
+    }]
+}, 
+{
+    label: '城市名',
+    options: [{
+        value: 'Chengdu',
+        label: '成都'
+    }, {
+        value: 'Shenzhen',
+        label: '深圳'
+    }, {
+        value: 'Guangzhou',
+        label: '广州'
+    }, {
+        value: 'Dalian',
+        label: '大连'
+    }]
+}
+]
+```
 
 ## 方法详情
 

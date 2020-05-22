@@ -1,8 +1,8 @@
-# EhComboBox
+# EhRemoteSelect
 
 ## 继承
 
-EhComboBox -> EhSelect
+EhRemoteSelect -> EhSelect
 
 ## 描述
 
@@ -85,12 +85,8 @@ selectedIndex的取值范围必须是0到buttons.length-1，超出此范围的�
 
 <br />
 
-<EhComboBoxSample />
+<EhRemoteSelectSample />
 
-**EhComboBoxSample.vue文件代码：**
+**EhRemoteSelectSample.vue文件代码：**
 
-<<< @/docs/.vuepress/components/EhComboBoxSample.vue
-
-**EhComboBoxItemRendererSample.vue文件代码：**
-
-<<< @/docs/.vuepress/components/EhComboBoxItemRendererSample.vue
+<<< @/docs/.vuepress/components/EhRemoteSelectSample.vue

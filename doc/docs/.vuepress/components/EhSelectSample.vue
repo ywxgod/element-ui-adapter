@@ -11,6 +11,12 @@
                 @change="onChange"
                 :options="options2" v-model="userId2">
         </eh-select>
+        <eh-select
+                v-model="city"
+                value-field="value"
+                :options="groupOptions"
+                group="true">
+        </eh-select>
     </div>
 </template>
 
@@ -37,8 +43,37 @@
                     { userId: 3, userName: '任我行' },
                     { userId: 4, userName: '东方不败' }
                 ],
+                groupOptions: [
+                    {
+                        label: '热门城市',
+                        options: [{
+                            value: 'Shanghai',
+                            label: '上海'
+                        }, {
+                            value: 'Beijing',
+                            label: '北京'
+                        }]
+                    },
+                    {
+                        label: '城市名',
+                        options: [{
+                            value: 'Chengdu',
+                            label: '成都'
+                        }, {
+                            value: 'Shenzhen',
+                            label: '深圳'
+                        }, {
+                            value: 'Guangzhou',
+                            label: '广州'
+                        }, {
+                            value: 'Dalian',
+                            label: '大连'
+                        }]
+                    }
+                ],
                 userId1: 1,
-                userId2: 3
+                userId2: 3,
+                city: 'Guangzhou'
             }
         },
         methods: {

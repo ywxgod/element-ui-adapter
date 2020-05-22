@@ -2,7 +2,7 @@
     import EhSelect from "../base/EhSelect";
 
     export default {
-        name: 'EhComboBox',
+        name: 'EhRemoteSelect',
         extends: EhSelect
     }
 </script>
