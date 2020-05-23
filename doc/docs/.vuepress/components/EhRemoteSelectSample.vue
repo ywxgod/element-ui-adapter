@@ -1,6 +1,7 @@
 <template>
     <div>
         <eh-remote-select
+                clearable
                 :url="url"
                 labelField="name"
                 v-model="value"
