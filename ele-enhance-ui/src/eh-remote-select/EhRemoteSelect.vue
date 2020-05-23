@@ -8,6 +8,7 @@
         props: {
             url: {
                 type: String,
+                required: true,
                 default: ''
             },
             search: {
@@ -40,14 +41,22 @@
             // 生成查询参数，子类可以覆盖进行修改。
             getParams(query) {
                 return { params: { [this.paramsName]: query } }
+            },
+            initSearch() {
+                console.log(this.$attrs);
+                if (this.search) {
+                    this.$attrs.filterable = true;
+                    this.$attrs.remote = true;
+                    this.$attrs.remoteMethod = this.getData;
+                }
             }
         },
-        created() {
-            if (this.search) {
-                this.$attrs.filterable = true;
-                this.$attrs.remote = true;
-                this.$attrs.remoteMethod = this.getData;
-            }
+        // this.$attrs每次渲染后会被重置，所以需要重新设置
+        beforeUpdate() {
+            this.initSearch();
+        },
+        beforeMount() {
+            this.initSearch();
         },
         mounted() {
             if (this.url && !this.search) {
