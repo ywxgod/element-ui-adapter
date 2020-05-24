@@ -29,8 +29,15 @@ module.exports = {
                     { text: 'en-ui', title: 'Enhancement of EleUI', link: '/eh-ui/' },
                     { text: 'v-mec', title: '', link: '/v-mec/' },
                     { text: 'processing', title: '', link: '/processing/' },
-                    { text: 'c' , title: '', link: '/c-program/'},
-                    { text: 'vuepress', link: '/vue-press/' }
+                    { text: 'typescript' , title: '', link: '/typescript/'},
+                    { text: 'deno', title: '', link: '/deno/' }
+                ]
+            },
+            {
+                text: '其他',
+                items: [
+                    { text: 'E文翻译', title: '', link: '/translations/' },
+                    { text: '中学数理化', title: '', link: '/pcm/' }
                 ]
             },
             {
@@ -49,15 +56,6 @@ module.exports = {
                     children: components
                 }
             ],
-            '/vue-press/': [
-                {
-                    title: 'vuepress学习',
-                    path: '',
-                    children: [
-                        '如何上手'
-                    ]
-                }
-            ],
             '/v-mec/': [
                 {
                     title: 'v-mec'
@@ -68,9 +66,28 @@ module.exports = {
                     title: 'processing'
                 }
             ],
-            '/c-program/': [
+            '/typescript/': [
                 {
-                    title: 'c program'
+                    title: 'typescript'
+                }
+            ],
+            '/deno/': [
+                {
+                    title: 'deno'
+                }
+            ],
+            '/translations/': [
+                {
+                    title: 'E文翻译',
+                    path: '',
+                    children: []
+                }
+            ],
+            '/pcm/': [
+                {
+                    title: '中学数理化',
+                    path: '',
+                    children: []
                 }
             ],
             '/profile/': [
